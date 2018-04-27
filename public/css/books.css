@@ -1,0 +1,19 @@
+body{
+  background: #fafafa;
+}
+
+.main-body{
+  margin-top: 20px;
+}
+
+.new-form{
+  width:30%;
+}
+
+.no-display{
+  display: none;
+}
+
+.delete-form{
+  display: inline;
+}

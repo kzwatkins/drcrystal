@@ -1,0 +1,75 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/static/images/kaleidoscope-logo.png" type="image/gif" sizes="16x16">
+    <title>Dr. Crystal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/header-style.css">
+  </head>
+
+  <body class="text-center">
+      <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div class="container">
+            <% if(error && error.length > 0){ %>
+                <div class="alert alert-danger fadeOut" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0){ %>
+                <div class="alert alert-success fadeOut" role="alert">
+                    <%= success %>
+                </div>
+            <% } %>
+        </div>
+
+        <main role="main" class="inner cover">
+          <h1 class="cover-heading animated bounceInUp" id="landing-header">Kaleidoscope Solutions</h1>
+          <h3><em>Reveal the Beauty and Excellence Within</em></h3>
+          <div class="row">
+            <div class="col-md-3">
+              <h3 class="text-center m-3 mx-auto pt-5">Biblical Counseling</h3>
+            </div>
+            <div class="col-md-6">
+              <img class="img-thumbnail m-3 rounded" src="/static/images/kaleidoscope-logo.png" alt="Kaleidoscope Solutions Logo">
+            </div>
+            <div class="col-md-3">
+              <h3 class="text-center m-3 mx-auto pt-5">Discussion Groups</h3>
+            </div>
+
+          </div>
+          <p class="lead">
+            <a href="/books" class="" ><button type="button" id="hdr-btn" class="btn btn-lg btn-primary animated fadeIn">Get Started</button></a>
+          </p>
+        </main>
+
+        <!-- <p class="lead">Biblical Counseling <i class="fas fa-circle fa-xs"></i> Discussion Groups </p> -->
+
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+
+          <div class="row">
+            <div class="col-md-9">
+              <p><div class="small"><em> Powered by <a href="https://www.watkinstechpro.com">Watkins Proactive Research LLC</a> &copy; 2018</em></div></p>
+            </div>
+            <div class="col-md-3">
+              <a href="https://unsplash.com/photos/Kw7fd6_1wSk" target="_blank" rel="noopener noreferrer" title="Waterdrop or Butterfly?" alt="Waterdrop or Butterfly? Photo by Lucas Huter"><button class="button btn-secondary btn-sm"><i class="fas fa-camera"></i> <span class="small">Lucas Huter</span></button></a>
+            </div>
+          </div>
+          </div>
+        </footer>
+      </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    <script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/books.js">
+
+    </script>
+  </body>
+</html>

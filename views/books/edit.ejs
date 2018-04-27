@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+<div class="row">
+  <div class="col-lg-12">
+
+    <h1 class="text-center">Update Book Information</h1>
+
+    <div class="mx-auto">
+        <form action="/books/<%= book._id %>?_method=PUT" method="post">
+            <div class="form-group">
+              <label for="name">Update Title</label>
+              <input type="text" class="form-control" name="book[name]" id="name" aria-describedby="nameHelp" value="<%= book.name %>">
+              <small id="nameHelp" class="form-text text-muted">Update the book title.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="desc">Update Description</label>
+              <textarea rows="8" class="form-control" cols="100" id="desc" name="book[desc]" aria-describedby="descHelp"><%= book.desc %></textarea>
+              <small id="descHelp" class="form-text text-muted">Update book description.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="url">Update Image URL</label>
+              <input type="text" class="form-control" name="book[url]" id="url" aria-describedby="urlHelp" value="<%= book.url %>">
+              <small id="urlHelp" class="form-text text-muted">Update url for the book image.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="price">Update Price</label>
+              <input type="text" class="form-control" name="book[price]" id="price" aria-describedby="priceHelp" value="<%= book.price %>">
+              <small id="priceHelp" class="form-text text-muted">Update price for the book.</small>
+            </div>
+
+            <div class="text-center">
+            <input type="submit" class="btn btn-primary btn-block" value="Submit">
+            <input type="reset" class="btn btn-primary btn-block" value="Reset">
+          </div>
+        </form>
+        <a href="/books" class="text-center">Go Back</a>
+    </div>
+
+</div>
+</div>
+
+<% include ../partials/footer %>

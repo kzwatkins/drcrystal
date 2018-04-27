@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Kaleidoscope Solutions</title>
+    <link rel="icon" href="/static/images/kaleidoscope-logo.png" type="image/gif">
+    <!-- <link rel="stylesheet" href="/static/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/books.css">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+
+  <a class="navbar-brand" href="/books">Kaleidoscope Solutions</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/books">View All Books</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <% if(!currentUser){ %>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Sign Up <span class="sr-only">(current)</span></a>
+        </li>
+      <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Hi, <%= currentUser.username %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      <% } %>
+    </ul>
+  </div>
+</div>
+
+</nav>
+
+    <div class="container main-body">
+
+      <% if(error && error.length > 0){ %>
+        <div class="alert alert-danger fadeOut" role="alert">
+          <%= error %>
+        </div>
+      <% } %>
+      <% if(success && success.length > 0){ %>
+        <div class="alert alert-success fadeOut" role="alert">
+          <%= success %>
+        </div>
+      <% } %>
