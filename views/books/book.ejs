@@ -1,9 +1,18 @@
 <% include ../partials/header %>
 
-<h1>More Information about the Book</h1>
+<h1>More Information about <%= book.title %></h1>
+<div class="row">
+  <div class="col-md-4 col-sm-6 pl-auto">
+    <div class="card text-center">
+      <img class="card-img-top" src="/static/images/<%= book.url %>" alt="Book: <%= book.title %>">
+      <div class="card-body">
+        <h5 class="card-title"><%= book.title %></h5>
+        <p class="card-text"><%= book.desc %></p>
+        <button type="button" class="button btn btn-primary ">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h3><%= book.name %></h3>
-<h4><%= book.desc %></h4>
-<img src="/static/images/<%= book.url %>" width=100%>
 
 <% include ../partials/footer %>

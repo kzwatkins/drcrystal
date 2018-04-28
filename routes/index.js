@@ -1,5 +1,5 @@
 var Generics    = require("../generics");
-
+var Middleware  = require("../middleware");
 var User        = require("../models/user"),
     Book        = require("../models/book");
 
@@ -30,8 +30,8 @@ router.get(LOGIN_ROUTE, function(req, res){
   res.render("login");
 });
 
-router.post(LOGIN_ROUTE, function(req, res){
-    req.flash("success", "You have successfully logged in, " + req.user.username);
+router.post(LOGIN_ROUTE, auth("local"), function(req, res){
+    req.flash("success", "You have successfully logged in, " + req.body.username);
     res.redirect(BOOKS_ROUTE);
 });
 

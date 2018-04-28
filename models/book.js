@@ -12,6 +12,7 @@ const BLUEPRINT = {
   url: String,
   desc: String,
   price: String,
+  author: User.REF,
   createdAt: Time.REF
 };
 

@@ -1,26 +1,43 @@
 <% include ../partials/header %>
 
-<header class="jumbotron">
-  <div class="container">
-    <h1>Welcome to YelpCamp Books</h1>
-    <p>View our hand-picked books from all over the world!</p>
-    <p><a href="/books/new" id="newbook"><button type="button" class="btn btn-primary btn-lg">Add New Book</button></a></p>
-  </div>
+<header class="jumbotron mb-3">
+  <div class="row">
+    <div class="col-md-6 my-auto">
+      <h1>Welcome to Kaleidoscope Solutions</h1>
+      <p class="lead">Biblical Counseling   <i class="fas fa-circle fa-xs"></i>   Group Discussions</p>
+      <p><a href="/books/new" id="newbook"><button type="button" class="btn btn-primary btn-lg">Add New Book, Service or Event</button></a></p>
+    </div>
 
+    <div class="col-md-6">
+      <img src="/static/images/kaleidoscope-logo.png" class="logo-right">
+    </div>
+  </div>
 </header>
 
 <main>
   <div class="row text-center">
-    <% if(books){ %>
     <% books.forEach(function(book){ %>
+
       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <img src='/static/images/<%= book.url %>' class="img-thumbnail">
-        <div class="caption"><h4><%= book.name %></h4></div>
+        <div class="card text-center m-1">
+          <img class="card-img-top" src="/static/images/<%= book.url %>" alt="Book: <%= book.title %>">
+            <div class="card-body">
+              <h5 class="card-title"><%= book.title %></h5>
+              <form class="" action="/books/<%= book._id %>" method="get">
+                <input type="submit" class="btn btn-primary" value="More Info">
+              </form>
+            </div>
+        </div>
+      </div>
+      <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div><h4><%= book.title %></h4></div>
         <form class="" action="/books/<%= book._id %>" method="get">
           <input type="submit" class="btn btn-primary" value="More Info">
         </form>
-      </div>
-    <% });} %>
+      </div> -->
+
+
+    <% }); %>
   </div>
 </main>
 
